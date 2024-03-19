@@ -1,0 +1,26 @@
+
+.fullcontainer{
+    margin-top: 110px;
+}
+.brands_title{
+    margin-left: 20px;
+    color:#5D99F3 ;
+    text-align: center;
+    font-weight: 300;
+    font-size:50px;
+    }
+.brandsimg{
+    padding-left: 30px;
+    padding-top: 20px;
+   
+}
+.brands_name{
+    margin-left: 20px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.slick-slide > div{
+    margin: 0 20px;
+}
