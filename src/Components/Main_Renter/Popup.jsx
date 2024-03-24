@@ -14,7 +14,7 @@ const closeModal = (e) =>{
   }
 }
   return (
-    <div ref={Popref} onClick={closeModal} className='containerpopup'>
+    <div ref={Popref} onClick={closeModal} className='containerpopup' >
       
       <p className='closebtn' onClick={onClose}><X color='black'/></p>
       <p className='profilepopup'><CircleUserRound color='black' size={70}/></p>

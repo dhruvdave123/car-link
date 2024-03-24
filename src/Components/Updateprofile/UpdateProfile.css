@@ -54,19 +54,19 @@
     font-size: x-large;
     font-weight: bold;
 }
-#email{
+#Email{
     margin-left: 50px;
     margin-top: 5px;
     width: 50%;
     border-radius: 4px;
 }
-#passwordinput{
+#Password{
     margin-left: 50px;
     margin-top: 5px;
     width: 50%;
     border-radius: 4px;
 }
-#contactnumber{
+#Contact_number{
     margin-left: 50px;
     margin-top: 5px;
     width: 50%;

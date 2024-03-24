@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 function Brands() {
     var settings = {
+        arrows: true,
         dots: false,
         infinite: true,
         speed: 500    ,

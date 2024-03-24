@@ -12,8 +12,10 @@ import Popup from "./Popup";
 import { User } from 'lucide-react'
 import { useState } from "react";
 import { CircleUserRound } from 'lucide-react';
+import Popupabout from "../aboutus/Popupabout";
 function Mainrenter() {
   const [showpopup,setShowpopup]=useState(false);
+  const [showpopupabout,setShowpopupabout]=useState(false);
   const headingarray=[
     {
        name:'CarLink'
@@ -36,7 +38,10 @@ function Mainrenter() {
       read:"Read More"
     },
     {
-      about:"Contact Us"
+      about:<>
+      <p onClick={()=>setShowpopupabout(true)}>About Us</p>
+       { showpopupabout &&  <Popupabout onClose={()=>setShowpopupabout(false)}/> }
+      </>
     },
     {
       Book:"How to Book"
@@ -46,7 +51,7 @@ function Mainrenter() {
 
   return (
    
-    <div className="mainrenter">
+    <div className="mainrenter" >
       <div className="mainhead">
       <Heading headingarray={headingarray}/>
       </div>

@@ -24,7 +24,7 @@
     margin: 5px;
     /* border: 1px solid black; */
     display: flex;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .bestprice{
@@ -61,21 +61,42 @@
 .price_img{
     /* border:1px solid black; */
     margin-left: 50px;
-    width: 50%;
-    height: 100px;
-   
+    width: 25%;
+    height: 50px;
+    background-image: url("./images/speedometer-icon.webp");
+    background-size: 100% 100%;
+   /* border: 1px solid black; */
+   margin-top: 20px;
+   margin-left: 80px;
 }
 .safe_img{
     /* border:1px solid black; */
-    margin-left: 50px;
-    width: 50%;
-    height: 100px;
+    width: 35%;
+    height: 70px;
+    background-image: url("./images/evcar.jpg");
+    background-size: 100% 100%;
+   /* border: 1px solid black; */
+   margin-top: 15px;
+   margin-left: 70px;
 }
 .driver_img{
     /* border:1px solid black; */
-    margin-left: 50px;
-    width: 50%;
-    height: 100px;
+    width: 25%;
+    height: 50px;
+    background-image: url("./images/peertopeer.JPG");
+    background-size: 100% 100%;
+   /* border: 1px solid black; */
+   margin-top: 25px;
+   margin-left: 80px;
+}
+.support_img{
+    width: 25%;
+    height: 50px;
+    background-image: url("./images/customersupport.jpg");
+    background-size: 100% 100%;
+   /* border: 1px solid black; */
+   margin-top: 25px;
+   margin-left: 80px;
 }
 .location_logo{
     margin-top: 20px;
@@ -91,4 +112,49 @@
      margin-top: 25px;
      margin-left:30px ;
      color: orangered;
+ }
+
+ .fpp{
+    padding-top: 25px;
+    font-size: large;
+    font-weight: bold;
+ }
+ .fpptxt{
+    color:#6A6A6A;
+    text-align: center;
+    padding-top: 20px;
+ }
+ .efotxt{
+    color:#6A6A6A;
+    text-align: center;
+    padding-top: 20px;
+ }
+ .ptpcdtxt{
+    color:#6A6A6A;
+    text-align: center;
+    padding-top: 20px;
+ }
+ .saatxt{
+    color:#6A6A6A;
+    text-align: center;
+    padding-top: 20px;
+ }
+
+ .efo{
+    padding-top: 10px;
+    font-size: large;
+    font-weight: bold;
+ }
+
+ .ptpcd{
+    padding-top: 20px;
+    font-size: large;
+    font-weight: bold;
+ }
+
+
+ .saa{
+    padding-top: 20px;
+    font-size: large;
+    font-weight: bold;
  }

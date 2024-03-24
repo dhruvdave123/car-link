@@ -4,7 +4,29 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Link } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css'
+const cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
+  'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'];
 function Searchrenter() {
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [selectedCity, setSelectedCity] = useState(null);
+
+  // const toggleDropdown = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
+  // const handleCityClick = (city) => {
+  //   setSelectedCity(city);
+  //   setIsOpen(false); // Close dropdown after selection
+  // };
+  const cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
+  'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'];
+
+
+  const [selectedCity, setSelectedCity] = useState(null); // Initially no selected city
+
+  const handleCityClick = (city) => {
+    setSelectedCity(city);
+  };
   const [showstartCalendar, setstartShowCalendar] = useState(false);
   const [selectedstartDate, setSelectedstartDate] = useState(new Date());
 
@@ -34,7 +56,29 @@ function Searchrenter() {
        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16" className='mapicon'>
   <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
 </svg>
-<p className='searchlocationrenter'>Search Location</p>
+<p className='searchlocationrenter' >
+<select value={selectedCity} onChange={(event) => setSelectedCity(event.target.value)}>
+        {/* Option for no selection */}
+        <option value="">Select City</option>
+        {cities.map((city, index) => (
+          <option key={index} value={city}>{city}</option>
+        ))}
+      </select>
+
+</p>
+{/* {isOpen && (
+        <ul>
+          {cities.map((city, index) => (
+            <>
+            
+            <li key={index}>
+              <button onClick={() => handleCityClick(city)}>{city}</button>
+            </li>
+            </>
+          ))}
+        </ul>
+      )} */}
+
 
        </div>
        <div className="renterdate">
@@ -79,6 +123,7 @@ function Searchrenter() {
 
         <Link to="/Car_choose" className='searchtext'>Search</Link>
        </div>
+    
     </div>
   )
 }

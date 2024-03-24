@@ -117,3 +117,43 @@
     margin-left:30px ;
     color: orangered;
 }
+
+.sl{
+    font-size: x-large;
+    font-weight: bold;
+    padding-top: -5px;
+}
+.sltext{
+    text-align: center;
+    padding-top: 20px;
+    color: #6a6a6a;
+}
+.ra{
+    font-size: x-large;
+    font-weight: bold;
+}
+.ratext{
+    text-align: center;
+    padding-top: 15px;
+    color: #6a6a6a;
+}
+.mp{
+    font-size: x-large;
+    font-weight: bold;
+    
+}
+.mptext{
+    text-align: center;
+    padding-top: 15px;
+    color: #6a6a6a;
+}
+
+.st{
+    font-size: x-large;
+    font-weight: bold;
+}
+.sttext{
+    text-align: center;
+    padding-top: 15px;
+    color: #6a6a6a;
+}

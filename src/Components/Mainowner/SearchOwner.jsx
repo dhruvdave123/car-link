@@ -6,31 +6,33 @@ import { Link } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css'
 
 function SearchOwner() {
-    const [showstartCalendar, setstartShowCalendar] = useState(false);
-    const [selectedstartDate, setSelectedstartDate] = useState(new Date());
+    // const [showstartCalendar, setstartShowCalendar] = useState(false);
+    // const [selectedstartDate, setSelectedstartDate] = useState(new Date());
   
-    const handleTextstartClick = () => {
-      setstartShowCalendar(!showstartCalendar);
-    };
+    // const handleTextstartClick = () => {
+    //   setstartShowCalendar(!showstartCalendar);
+    // };
   
-    const handlestartDateChange = (date) => {
-      setSelectedstartDate(date);
-      setstartShowCalendar(false);
-    };
-    ///////////////////////////////////////////////////////
-    const [showendCalendar, setendShowCalendar] = useState(false);
-    const [selectedendDate, setSelectedendDate] = useState(new Date());
+    // const handlestartDateChange = (date) => {
+    //   setSelectedstartDate(date);
+    //   setstartShowCalendar(false);
+    // };
+    // ///////////////////////////////////////////////////////
+    // const [showendCalendar, setendShowCalendar] = useState(false);
+    // const [selectedendDate, setSelectedendDate] = useState(new Date());
   
-    const handleTextClick = () => {
-      setendShowCalendar(!showendCalendar);
-    };
+    // const handleTextClick = () => {
+    //   setendShowCalendar(!showendCalendar);
+    // };
   
-    const handleDateChange = (date) => {
-      setSelectedendDate(date);
-      setendShowCalendar(false);
-    };
+    // const handleDateChange = (date) => {
+    //   setSelectedendDate(date);
+    //   setendShowCalendar(false);
+    // };
   return (
-    <div className='searchrenter'>
+
+  
+    <div className='searchowner'>
     <div className='searchstate'>
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16" className='mapicon'>
   <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"/>
@@ -39,50 +41,50 @@ function SearchOwner() {
 <p className='searchlocationrenter'>Upload A Vehicle</p>
 
     </div>
-    <div className="renterdate">
-      <div className='startdate'>
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16" className='calendericon'>
+
+    
+    <div className='searchbtn'>
+
+     <Link to="/Uploadcar" className='searchtext'>Upload</Link>
+    </div>
+ </div>
+  )
+}
+{/* <div className="renterdate">
+<div className='startdate'>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16" className='calendericon'>
 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
 </svg>
 <p className='startdateinput'>
 <p onClick={handleTextstartClick}>Start Date: {selectedstartDate.toLocaleDateString()}</p>
-   {showstartCalendar && (
-     <div style={{ position: 'absolute', zIndex: 1 }}>
-       <Calendar
-         onChange={handlestartDateChange}
-         value={selectedstartDate}
-       />
-     </div>
-   )}
+{showstartCalendar && (
+<div style={{ position: 'absolute', zIndex: 1 }}>
+ <Calendar
+   onChange={handlestartDateChange}
+   value={selectedstartDate}
+ />
+</div>
+)}
 </p>
-      </div>
-      <div className='enddate'>
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16" className='calendericon'>
+</div>
+<div className='enddate'>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16" className='calendericon'>
 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
 <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
 </svg>
 
 <p className='startdateinput'>
-   <p onClick={handleTextClick}>End Date: {selectedendDate.toLocaleDateString()}</p>
-   {showendCalendar && (
-     <div style={{ position: 'absolute', zIndex: 1 }}>
-       <Calendar
-         onChange={handleDateChange}
-         value={selectedendDate}
-       />
-     </div>
-   )}
-  
- </p>
-      </div>
-    </div>
-    <div className='searchbtn'>
+<p onClick={handleTextClick}>End Date: {selectedendDate.toLocaleDateString()}</p>
+{showendCalendar && (
+<div style={{ position: 'absolute', zIndex: 1 }}>
+ <Calendar
+   onChange={handleDateChange}
+   value={selectedendDate}
+ />
+</div>
+)}
 
-     <Link to="/Car_choose" className='searchtext'>Upload</Link>
-    </div>
- </div>
-  )
-}
-
+</p>
+</div> */}
 export default SearchOwner

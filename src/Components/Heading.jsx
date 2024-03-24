@@ -6,6 +6,7 @@ import { useState } from "react";
 let Heading = ({headingarray})=> {
 const [showpopup,setShowpopup]=useState(false);
 return (
+    
 <div class="navigation">
     <ul class="menuitem">
         {headingarray.map((d)=>(
@@ -19,7 +20,7 @@ return (
     
         <li>{d.contact}</li>
        <li>{d.read}</li>
-       <li>{d.about}</li>
+       <li className="headingaboutus">{d.about}</li>
        <li> {d.Book}</li>
        
        {/* <li>{d.profile}</li> */}
