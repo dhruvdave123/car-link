@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FormSection1 from './FormSection1';
 import FormSection2 from './FormSection2';
+import { Link } from 'react-router-dom';
 
 function Uploadcar() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -21,12 +22,14 @@ function Uploadcar() {
   });
 
 
-  const handleNext = () => {
-    setCurrentStep(currentStep + 1);
-  };
-  const handlePrevious = () => {
-    setCurrentStep(currentStep - 1);
-  };
+  // const handleNext = () => {
+  //   // setCurrentStep(currentStep + 1);
+  //   <Link to="/FormSection2"></Link>
+  // };
+  // const handlePrevious = () => {
+  //   // setCurrentStep(currentStep - 1);
+  //   <Link to="/FormSection1"></Link>
+  // };
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -43,32 +46,29 @@ function Uploadcar() {
 
   return (
     <div>
-      {currentStep === 1 && (
-        <>
-        <FormSection1
+      <>
+        {/* <FormSection1
           formData={formData}
           handleChange={handleChange}
-          onNext={handleNext}
+          // onNext={handleNext}
          
-        />
+        /> */}
       
     
-      </>
-      )}
-      {currentStep === 2 && (
-        <>
+      
+      
+        
         <FormSection2
           formData={formData}
           handleChange={handleChange}
           onSubmit={handleSubmit}
-          onPrevious={handlePrevious}
-        />
+         // onPrevious={handlePrevious}
+        ></FormSection2>
       
-    
+    </>
 
      
-    </>
-      )}
+    
     </div>
   );
 }

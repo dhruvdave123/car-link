@@ -45,7 +45,7 @@ function SearchOwner() {
     
     <div className='searchbtn'>
 
-     <Link to="/Uploadcar" className='searchtext'>Upload</Link>
+     <Link to="/FormSection1" className='searchtext'>Upload</Link>
     </div>
  </div>
   )

@@ -4,6 +4,7 @@ import { useState
  } from 'react';
  import Dropdown from './Dropdown';
  import { Car } from 'lucide-react';
+ import { Link } from 'react-router-dom';
  const inputstyle={
   height: "20px",
   border: "1px solid #ccc",
@@ -155,7 +156,7 @@ function FormSection2({ formData, handleChange, onSubmit,onPrevious }) {
          required
     />
     <br/>
-     <button type="button" onClick={onPrevious} className='submitbtn'>Previous</button>
+     <button type="button" className='submitbtn'> <Link to="/FormSection1">Previous</Link></button>
       <button type="submit" onClick={onSubmit} className='submitbtn'>Submit</button>
     </div>
     </div>

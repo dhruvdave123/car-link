@@ -1,12 +1,26 @@
 import React from 'react';
 import './FormSection.css'
 import { Car } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 const inputstyle1={
   height: "25px",
   border: "1px solid #ccc",
   borderradius: "10px",
 };
-function FormSection1({ formData, handleChange, onNext }) {
+function FormSection1({  }) {
+  const [formData, setFormData] = useState({
+    plate_no: '',
+    puc_no: '',
+    rc_no: '',
+    validation_date:'',
+    Startdate:'',
+    Enddate:'',
+  });
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+    
+  };
   return (
     <div className='container_main_form1'>
       <div className='container_form1'>
@@ -109,7 +123,7 @@ function FormSection1({ formData, handleChange, onNext }) {
      </div>
     
      <br/>
-       <button type="button" onClick={onNext} className='nextbtn'>Next</button>
+       <button type="button"  className='nextbtn'> <Link to="/Uploadcar">Next</Link></button>
      <br/>
 
     </div>

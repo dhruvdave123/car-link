@@ -16,6 +16,8 @@ import Vehicle_reg from "./Components/Registration/Vehicle_reg";
 import Heading_reg from "./Components/Heading_reg";
 import Uploadcar from "./Components/Mainowner/Uploadcar";
 import Role from "./Components/Signup/Role";
+import FormSection1 from "./Components/Mainowner/FormSection1";
+import FormSection2 from "./Components/Mainowner/FormSection2";
 
 let App = () =>{
    return(
@@ -41,6 +43,8 @@ let App = () =>{
       <Route path="/Heading_reg" element={<Heading_reg/>}></Route>
       <Route path="/Uploadcar" element={<Uploadcar/>}></Route>
       <Route path="/Role" element={<Role/>}></Route>
+      <Route path="/FormSection1" element={<FormSection1/>}></Route>
+      <Route path="/FormSection2" element={<FormSection2/>}></Route>
       
       
       </Routes>
